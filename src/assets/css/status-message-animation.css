@@ -1,0 +1,22 @@
+.animate-status-message {
+  animation-duration: 3s;
+  animation-name: animate-fade;
+  animation-fill-mode: forwards;
+}
+
+.animate-status-message {
+    animation-name: fade-out;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

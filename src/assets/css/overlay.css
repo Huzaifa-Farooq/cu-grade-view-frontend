@@ -1,0 +1,54 @@
+.dialog-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+  border: 0.5px solid rgb(196, 196, 196);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+  backdrop-filter: blur(15px);
+}
+
+.blur-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+.close {
+  position: absolute; 
+  display: block; 
+  top: 0px; 
+  right: 5px;
+  float: right;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.close:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  color: #1cb495;
+}
+
+.dialog-container button {
+  margin: 10px;
+}
+
