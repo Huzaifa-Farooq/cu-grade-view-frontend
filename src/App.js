@@ -15,8 +15,8 @@ import NavigationComponent from "./components/NavigationComponent";
 import Cookies from 'js-cookie';
 
 
-// const apiUrl = "http://127.0.0.1:2000";
-const apiUrl = "https://cucourseview-huzaifafarooq412.b4a.run/";
+const apiUrl = "http://127.0.0.1:5000";
+// const apiUrl = "https://cucourseview-huzaifafarooq412.b4a.run/";
 const apiRequestHeaders = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
