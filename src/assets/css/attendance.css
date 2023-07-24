@@ -1,3 +1,49 @@
+/* div containing tables for class and lab attendance that will be parallel */
+.attendance-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* styling table div so it have some shadow and other styling */
+.attendance-container .attendance-table-div{
+  box-shadow: 0px 0px 5px 2px #fff;
+  /* box shadow but not on the top */
+  border-radius: 10px;
+}
+.attendance-table-div > h3 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 28px;
+  text-transform: uppercase;
+  /* text-decoration: underline 1.5px; */
+}
+.attendance-table-div > h3 + hr {
+  /* bottom margin set to 10 */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.attendance-container > div:nth-child(1){
+  margin-right: 20px;
+}
+
+.attendance-overview {
+  margin: 10px;
+  padding-left: 10px;
+  display: flex;
+}
+.attendance-overview > div:nth-child(1) {
+  margin-right: 20%;
+}
+.attendance-overview .short {
+  color: red;
+}
+
+.attendance-table {
+  width: 95%;
+}
+
 .attendance-table td.datetime {
   width: 27%;
 }
@@ -14,4 +60,5 @@
   border: 2px solid red;
 
 }
+
 

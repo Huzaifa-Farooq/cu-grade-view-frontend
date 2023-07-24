@@ -15,8 +15,8 @@ import NavigationComponent from "./components/NavigationComponent";
 import Cookies from 'js-cookie';
 
 
-// const apiUrl = "http://127.0.0.1:5000";
-const apiUrl = "https://cucourseview-huzaifafarooq412.b4a.run/";
+const apiEndpoint = "http://127.0.0.1:5000";
+// const apiEndpoint = "https://cucourseview-huzaifafarooq412.b4a.run/";
 const apiRequestHeaders = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -56,7 +56,7 @@ const App = () => {
       key: key
     });
 
-    fetch(apiUrl + '/taskdata/' + sessionId + "?" + params, {
+    fetch(apiEndpoint + '/taskdata/' + sessionId + "?" + params, {
       headers : apiRequestHeaders,
         method: 'GET',
     })
@@ -88,7 +88,7 @@ const App = () => {
   }
 
   function submitTask(sessionId){
-    fetch(apiUrl + '/task/' , {
+    fetch(apiEndpoint + '/task/' , {
         method: 'POST',
         headers : apiRequestHeaders,
         body: JSON.stringify({
