@@ -14,14 +14,7 @@ import NavigationComponent from "./components/NavigationComponent";
 
 import Cookies from 'js-cookie';
 
-
-const apiEndpoint = "http://127.0.0.1:5000";
-// const apiEndpoint = "https://cucourseview-huzaifafarooq412.b4a.run/";
-const apiRequestHeaders = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-  };
-const cookieExpireTimeHours = 60 * 60 * 1000  // 1 Hour
+import { apiEndpoint, apiRequestHeaders, cookieExpireTimeHours, getTaskDataWaitTime } from './constants'
 
 
 const App = () => {
@@ -70,7 +63,7 @@ const App = () => {
         setResponse(response);
         setTimeout(() => {
           fetchData(sessionId, key);
-        } , 1000);
+        } , getTaskDataWaitTime);
       }
       else{
         const responseData = response.data
@@ -83,7 +76,11 @@ const App = () => {
       }
     })
     .catch(error => {
-      console.error('Error fetching data:', error);
+      setResponse({
+        message: "Failed to send send request to API.",
+        error: error,
+        status: "Failed"
+      });
     });
   }
 
@@ -103,7 +100,7 @@ const App = () => {
     })
     .catch(error => {
       setResponse({
-        message: "Failed to send fetch request.",
+        message: "Failed to send send request to API.",
         error: error,
         status: "Failed"
       });

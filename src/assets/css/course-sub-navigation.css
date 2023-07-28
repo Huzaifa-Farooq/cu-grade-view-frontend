@@ -14,7 +14,7 @@
 .course-sub-nav li.active{
   /* make background color change slowly */
   transition: background-color 0.5s ease;
-    background-color: #fff;
+  background-color: #fff;
 }
 .course-sub-nav li.active > a{
   color: #1cb495;

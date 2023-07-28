@@ -1270,3 +1270,16 @@ tbody tr:hover {
 form .button{
   margin-right: 10px;
 }
+
+
+.score-div, .attendance-table-div {
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

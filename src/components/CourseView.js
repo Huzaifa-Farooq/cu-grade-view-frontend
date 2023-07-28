@@ -37,6 +37,14 @@ const CourseView = (props) => {
         );
     }
 
+    const handleButtonClick = () => {
+        setAttendanceVisible(!isAttendanceVisible);
+
+        // setTimeout(() => {
+            // setAttendanceVisible(!isAttendanceVisible);
+        //   }, 200);
+    }
+
 
     return (
         <div style={{display: 'block'}} className="course-div" data-course-id={courseDataRow.course_id}>
@@ -45,12 +53,15 @@ const CourseView = (props) => {
             <VerticalLine />
             <div className="course-sub-nav">
                 <ul>
-                    <li className={isAttendanceVisible ? null : 'active'} onClick={() => setAttendanceVisible(!isAttendanceVisible)}><a>Course Score</a></li>
-                    <li className={isAttendanceVisible ? 'active' : null} onClick={() => setAttendanceVisible(!isAttendanceVisible)}><a>Attendance</a></li>
+                    <li className={isAttendanceVisible ? null : 'active'} onClick={handleButtonClick}><a>Course Score</a></li>
+                    <li className={isAttendanceVisible ? 'active' : null} onClick={handleButtonClick}><a>Attendance</a></li>
                 </ul>
             </div>
             
-            {isAttendanceVisible ? <CourseAttendance attendance={courseAttendance} /> : courseScoreSections}
+            {
+            isAttendanceVisible ? <CourseAttendance attendance={courseAttendance} /> 
+            :
+            <div className="score-div">{courseScoreSections}</div>}
         </div>
     );
 }
