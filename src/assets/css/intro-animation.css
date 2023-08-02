@@ -8,12 +8,12 @@
     z-index: 3;
 }
 
-.animation .name{
+.app-name{
     font-family: 'Audiowide', cursive;
     font-size: 36px;
 }
 
-.animation .slogan {
+.app-slogan {
     font-family: 'SourceSans', sans-serif;
     font-size: 18px;
     text-transform: uppercase;

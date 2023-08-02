@@ -11,13 +11,23 @@ function OpeningAnimation(props) {
                 <img className='' alt='Logo' src={imageSource}></img>
             </div>
             <div className='animate glow delay-2'>
-                <span className='name'>CUGradeView</span> {/* Audiowide */}
+                <Name />
             </div>
             <div className='animate glow delay-3'>
-                <span className='slogan'>Bringing Scores to Life, with a Click and a Swipe!</span> {/* SourceSans */}
+                <Slogan />
             </div>
         </div>
         );
 }
 
+const Slogan = (props) => {
+    return <span className='app-slogan'>Bringing Scores to Life, with a Click and a Swipe!</span> /* SourceSans */
+}
+
+const Name = (props) => {
+    return <span className='app-name'>CUGradeView</span> /* Audiowide */
+}
+
+
 export default OpeningAnimation;
+export { Slogan, Name };

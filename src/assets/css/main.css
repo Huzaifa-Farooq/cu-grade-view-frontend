@@ -216,7 +216,7 @@ body {
   -ms-justify-content: center;
   justify-content: center;
   background-color: #000;
-  padding: 6em 4em 4em 4em;
+  padding: 3em 4em 4em 4em;
 }
 
 body.is-preload *,
@@ -239,13 +239,13 @@ body>* {
 
 @media screen and (max-width: 1680px) {
   body {
-    padding: 6em 3.5em 3.5em 3.5em;
+    padding: 3em 3.5em 3.5em 3.5em;
   }
 }
 
 @media screen and (max-width: 736px) {
   body {
-    padding: 5em 2em 2em 2em;
+    padding: 2em 2em 2em 2em;
   }
 }
 
@@ -1173,6 +1173,91 @@ button:disabled,
   #header {
     margin: 0 0 1em 0;
   }
+}
+
+#header .top-bar{
+  margin: 1em 0 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header .top-bar .slogan{
+  margin: 0.5em 0 0 0em;
+}
+
+#header div.logo img {
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  padding: 5px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+}
+#header div.logo {
+  padding: 0;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+  object-fit: cover;
+  object-position: center;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #646666;
+  margin-right: 10px;
+}
+
+
+nav {
+  padding-top: 5px;
+}
+nav ul {
+  margin-left: 1em;
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+  padding-left: .5em;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding-top: 5px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-right: 10px;
+  padding: 5px;
+  display: inline-block;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background: currentcolor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+nav a:hover {
+  cursor: pointer;
+}
+
+nav div {
+  /* center vertically */
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
 }
 
 /* Signup Form */

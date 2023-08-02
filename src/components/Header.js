@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import NewReportDialog from './NewReportDialog';
 import StudentProfile from './StudentProfile';
 import VerticalLine from './VerticalLine';
+import { Slogan, Name } from './OpeningAnimation';
+
+import logo from '../images/logo.png';
 
 
 function Header(props){
@@ -27,15 +30,24 @@ function Header(props){
 
   return (
     <header id="header">
+      <div className='top-bar'>
+        <div className='logo'><img src={logo}></img></div>
+        <div>
+          <div className='name'><Name /></div>
+          <div className='slogan'><Slogan /></div>
+        </div>
+      </div>
         <nav>
             <ul>
-                <button disabled={!props.hasResponseData} onClick={() => handleItemClick('newReport')}>
-                  New Report
-                </button>
-            </ul>
+                <li>
+                  <a disabled={!props.hasResponseData} onClick={() => handleItemClick('newReport')}>
+                    New Report
+                  </a>
+                </li>
+              </ul>
         </nav>
 
-        <VerticalLine width={"100%"} />
+        {/* <VerticalLine width={"100%"} /> */}
 
         {props.profileData && <StudentProfile profileData={props.profileData} />}
 
