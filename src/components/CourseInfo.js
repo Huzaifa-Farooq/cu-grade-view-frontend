@@ -15,8 +15,6 @@ function CourseInfo(props){
                 })
                 }
             </div>
-            <div>
-            </div>
         </Fragment>
     );
 }

@@ -6,8 +6,10 @@ import CourseInfo from "./CourseInfo";
 import CourseScoreSection from "./CourseScoreSection";
 import VerticalLine from "./VerticalLine";
 import CourseAttendance from "./CourseAttendance";
+import ScoreRadarChart from "./ScoreRadarChart";
 
 import '../assets/css/course-sub-navigation.css';
+import '../assets/css/course-view.css';
 
 
 const CourseView = (props) => {
@@ -22,8 +24,14 @@ const CourseView = (props) => {
     var courseDataRow = Object.values(courseData)[0].data[0];
 
     const courseScoreSections = [];
-        
+    const chartData = [];
     for (const [sectionTitle, sectionData] of Object.entries(courseData)){
+        chartData.push({
+            name: `${sectionTitle} (${sectionData.percentage}%)`,
+            value: sectionData.percentage,
+            fullMark: 100
+        });
+
         courseScoreSections.push(
             <Fragment>
                 <CourseScoreSection 
@@ -49,7 +57,25 @@ const CourseView = (props) => {
     return (
         <div style={{display: 'block'}} className="course-div" data-course-id={courseDataRow.course_id}>
             <h2>{courseDataRow.course_name}</h2>
-            <CourseInfo courseDataRow={courseDataRow} courseInfoColumns={courseInfoColumns} columnsTitles={columnsTitles} />
+            <div className="course-overview-div">
+                <div className="overview-text">
+                    <CourseInfo 
+                        courseDataRow={courseDataRow} 
+                        courseInfoColumns={courseInfoColumns} 
+                        columnsTitles={columnsTitles}
+                    />
+                </div>
+                <div className="vl"></div>
+                <div className="chart">
+                    <ScoreRadarChart
+                        fullMark={100} 
+                        chartTitle={courseDataRow.course_name}
+                        chartData={chartData} 
+                        width={600} 
+                        height={350}
+                    />
+                </div>
+            </div>            
             <VerticalLine />
             <div className="course-sub-nav">
                 <ul>

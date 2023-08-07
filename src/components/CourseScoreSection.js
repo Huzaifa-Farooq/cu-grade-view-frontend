@@ -11,6 +11,7 @@ function CourseScoreSection(props) {
     const obtMarks = courseScoreSectionData.marks;
     const percentage = courseScoreSectionData.percentage;
 
+
     return (
         <div>
             <h3>{sectionTitle} ({percentage}%)</h3>

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import React, { useState, useEffect, Fragment } from "react";
+import Cookies from 'js-cookie';
 
 import './App.css';
 import './assets/css/overlay.css';
@@ -11,8 +12,8 @@ import StatusMessage from './components/StatusMessage';
 import SessionIdInput from "./components/SessionIdInput";
 import OpeningAnimation from "./components/OpeningAnimation";
 import NavigationComponent from "./components/NavigationComponent";
+import ScoreRadarChart from './components/ScoreRadarChart';
 
-import Cookies from 'js-cookie';
 
 import { apiEndpoint, apiRequestHeaders, cookieExpireTimeHours, getTaskDataWaitTime } from './constants'
 
@@ -143,16 +144,32 @@ const App = () => {
     const courseIds = response.courseIds;
     const coursesData = response.coursesData;
 
-    const courseData = coursesData[visibleCourseId];
+    const currentCourseData = coursesData[visibleCourseId];
+
+    const chartData = [];
+    for (const [course, scoreData] of Object.entries(coursesData)){
+        chartData.push({
+            name: `${course} (${scoreData.overview.percentage}%)`,
+            value: scoreData.overview.percentage,
+            fullMark: 100
+    });
+  }
 
     html = (
     <Fragment>    
+      {/* <ScoreRadarChart 
+        fullMark={100}
+        chartTitle={currentCourseData.course_name}
+        chartData={chartData}
+        width={600}
+        height={400}
+      /> */}
       <div id='course-container'>
         <CoursesNavigation currentCourseId={visibleCourseId} handleCourseVisibility={handleCourseVisibility} courseIds={courseIds} />
         <CourseView
           courseInfoColumns={courseInfoColumns}
           columnsTitles={columnsTitles}
-          courseData={courseData}
+          courseData={currentCourseData}
           columns={columns}
         />
       </div>
