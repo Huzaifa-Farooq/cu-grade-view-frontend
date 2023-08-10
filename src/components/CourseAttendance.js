@@ -13,7 +13,7 @@ const CourseSectionAttendance = (props) => {
     const percentage = Math.round(((present / total) * 100));
     const is_short = percentage < 85;
 
-    const attendanceDivStyle = props.length === 1 ? {width: '80%'} : {};
+    const attendanceDivStyle = props.length === 1 ? {width: '60%'} : {};
 
     return (
         <>
