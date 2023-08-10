@@ -1,0 +1,33 @@
+.course-overview-div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-overview-div > .vl{
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* if screen width decreases then .vl should be removed */
+@media screen and (max-width: 768px) {
+  .course-overview-div > .vl{
+    display: none;
+  }
+
+  .course-overview-div > div {
+    width: 100% !important;
+  }
+}
+
+.course-overview-div .overview-text{
+    margin-top: 20px;
+    width: 30%;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
