@@ -28,7 +28,6 @@ const CourseView = (props) => {
     const courseScoreSections = [];
     const scoreChartData = [];
     const attendanceChartData = attendanceData.overview;
-    console.log(attendanceData);
     
     for (const [sectionTitle, sectionData] of Object.entries(courseData)){
         scoreChartData.push({

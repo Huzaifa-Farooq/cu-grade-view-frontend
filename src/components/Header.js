@@ -44,6 +44,11 @@ function Header(props){
                     New Report
                   </a>
                 </li>
+                <li>
+                  <a onClick={() => props.displayDemo()}>
+                    Demo Report
+                  </a>
+                </li>
               </ul>
         </nav>
 

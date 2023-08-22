@@ -85,6 +85,26 @@ const App = () => {
     });
   }
 
+  function displayDemo(){
+    fetch(apiEndpoint + '/demo' , {
+        method: 'GET',
+        headers : apiRequestHeaders,
+    })
+    .then(response => response.json())
+    .then(response => {
+        setResponse(response.data);
+        setVisibleCourseId(response.data.courseIds[0]);
+    }
+    )
+    .catch(error => {
+      setResponse({
+        message: "Failed to send send request to API.",
+        error: error,
+        status: "Failed"
+      });
+    });
+  }
+
   function submitTask(sessionId){
     fetch(apiEndpoint + '/task/' , {
         method: 'POST',
@@ -188,6 +208,7 @@ const App = () => {
         profileData={response ? response.profileData : null} 
         hasResponseData={hasResponseData} 
         onSessionIdSubmit={handleSessionIdInput}
+        displayDemo={displayDemo}
        />
       {html}
     </Fragment>
