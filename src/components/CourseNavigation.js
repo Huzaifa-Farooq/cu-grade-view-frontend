@@ -32,6 +32,7 @@ class CoursesNavigation extends React.Component{
                                     disabled={currentCourseId === courseId}
                                     onClick={this.handleCourseButtonClick} 
                                     className="button" 
+                                    style={{ marginBottom: '10px' }}
                                     data-course-id={courseId}
                                 >
                                     {courseId}

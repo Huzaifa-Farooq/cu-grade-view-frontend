@@ -1176,13 +1176,24 @@ button:disabled,
 }
 
 #header .top-bar{
-  margin: 1em 0 1em 0;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 #header .top-bar .slogan{
   margin: 0.5em 0 0 0em;
+}
+
+@media screen and (max-width: 960px) {
+  #header .name-slogan-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
 }
 
 #header div.logo img {

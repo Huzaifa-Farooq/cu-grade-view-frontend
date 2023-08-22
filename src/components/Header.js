@@ -30,9 +30,9 @@ function Header(props){
 
   return (
     <header id="header">
-      <div className='top-bar'>
-        <div className='logo'><img src={logo}></img></div>
-        <div>
+      <div className='top-bar row'>
+        <div className='logo col-md-6 col-sm-10'><img src={logo}></img></div>
+        <div className='name-slogan-div col-md-6 col-sm-10'>
           <div className='name'><Name /></div>
           <div className='slogan'><Slogan /></div>
         </div>
