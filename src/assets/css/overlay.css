@@ -40,6 +40,7 @@
   z-index: 2;
   font-weight: bold;
   font-size: 16px;
+  padding: 3px 10px 3px 10px;
 }
 
 .close:hover {

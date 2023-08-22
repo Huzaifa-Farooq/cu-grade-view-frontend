@@ -11,6 +11,7 @@ import logo from '../images/logo.png';
 function Header(props){
   const [showNewReportDialog, setshowNewReportDialog] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [isDemoActive, setIsDemoActive] = useState(false);
 
   const showElementMap = {
     'newReport': [showNewReportDialog, setshowNewReportDialog],
@@ -26,7 +27,15 @@ function Header(props){
 
   const closeDialog = () => {
     setshowNewReportDialog(false);
+    setIsDemoActive(false);
   };
+
+  const displayDemo = () => {
+    if (!isDemoActive){
+      props.displayDemo();
+      setIsDemoActive(true);
+    }
+  }
 
   return (
     <header id="header">
@@ -45,7 +54,11 @@ function Header(props){
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => props.displayDemo()}>
+                  <a 
+                    className={ isDemoActive ? 'active' : ''} 
+                    onClick={() => displayDemo()}
+                    disabled={isDemoActive}
+                  >
                     Demo Report
                   </a>
                 </li>

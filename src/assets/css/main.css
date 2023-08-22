@@ -1256,12 +1256,18 @@ nav a::after {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-nav a:hover::after {
+nav a:not(.active):hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 nav a:hover {
   cursor: pointer;
+}
+nav a.active:hover {
+  cursor: default;
+}
+nav a.active {
+  color: #1cb495 !important;
 }
 
 nav div {
