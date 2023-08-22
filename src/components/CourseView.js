@@ -62,7 +62,7 @@ const CourseView = (props) => {
         <div style={{display: 'block'}} className="course-div" data-course-id={courseDataRow.course_id}>
             <h2>{courseDataRow.course_name}</h2>
             <div className="course-overview-div">
-                <div className="overview-text">
+                <div className="overview-text col-md-4">
                     <CourseInfo 
                         courseDataRow={courseDataRow} 
                         courseInfoColumns={courseInfoColumns} 
@@ -70,7 +70,7 @@ const CourseView = (props) => {
                     />
                 </div>
                 <div className="vl"></div>
-                <div className="chart" style={{ minWidth: '25%' }}>
+                <div className="chart col-md-5">
                     <ScoreRadarChart
                         fullMark={100} 
                         chartTitle={courseDataRow.course_name}
@@ -83,7 +83,7 @@ const CourseView = (props) => {
                     attendanceChartData.present ? 
                     <>
                     <div className="vl"></div>
-                    <div className="chart" style={{ minWidth: '25%' }}>
+                    <div className="chart col-md-3">
                         <AttendancePieChart
                             width={200}
                             height={200}

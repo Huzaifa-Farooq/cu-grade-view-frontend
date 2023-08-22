@@ -7,20 +7,23 @@ function CourseScoreTable(props) {
     const courseScoreTableData = props.data;
 
     return (
-        <table>
-            <CourseScoreTableHeader columns={columns} columnsTitles={columnsTitles} />
-            <tbody>
-                {
-                courseScoreTableData.map(
-                    (rowData, index) => <CourseScoreTableRow key={index} columns={columns} rowData={rowData} />)
-                }
-            </tbody>
-        </table>
+        <div className='col-md-5 col-sm-10'>
+
+            <table style={{ width: '100%' }}>
+                <CourseScoreTableHeader columns={columns} columnsTitles={columnsTitles} />
+                <tbody>
+                    {
+                        courseScoreTableData.map(
+                            (rowData, index) => <CourseScoreTableRow key={index} columns={columns} rowData={rowData} />)
+                    }
+                </tbody>
+            </table>
+        </div>
     );
 }
 
 
-function CourseScoreTableHeader(props){
+function CourseScoreTableHeader(props) {
     return (
         <thead>
             <tr>
@@ -33,7 +36,7 @@ function CourseScoreTableHeader(props){
 }
 
 
-function CourseScoreTableRow(props){
+function CourseScoreTableRow(props) {
     return (
         <tr>
             {

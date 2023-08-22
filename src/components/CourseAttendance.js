@@ -14,10 +14,11 @@ const CourseSectionAttendance = (props) => {
     const is_short = percentage < 85;
 
     const attendanceDivStyle = props.length === 1 ? {width: '60%'} : {};
+    const colSpan = props.length === 1 ? 8 : 6;
 
     return (
-        <>
-        <div style={attendanceDivStyle} className='attendance-table-div'>
+        <div className={`col-md-${colSpan}`}>
+            <div className='attendance-table-div'>
             <h3>{attendanceData.attendanceType}</h3>
             <VerticalLine width='100%'/>
             <div className='attendance-overview'>
@@ -52,8 +53,9 @@ const CourseSectionAttendance = (props) => {
                     })}
                 </tbody>
             </table>
+            </div>
+            
         </div>
-        </>
     );
 };
 
@@ -66,7 +68,9 @@ const CourseAttendance = (props) => {
     return (
         <Fragment>
             <h3>Attendance</h3>
-            <div className='attendance-container'>
+
+
+            <div className='attendance-container row'>
                 {
                     // mapping with index
                     props.attendance.attendanceData.map((attendanceData, index) => {
@@ -77,6 +81,7 @@ const CourseAttendance = (props) => {
                     })
                 }
             </div>
+
         </Fragment>
     );
 };

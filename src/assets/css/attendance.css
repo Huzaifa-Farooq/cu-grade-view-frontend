@@ -25,7 +25,13 @@
 }
 
 .attendance-container > div:nth-child(1){
-  margin-right: 20px;
+  padding-right: 10px;
+}
+.attendance-container > div:nth-child(2){
+  padding-left: 10px;
+}
+.attendance-table-div {
+  padding-bottom: 10px;
 }
 
 .attendance-overview {
