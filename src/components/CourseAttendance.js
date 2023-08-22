@@ -13,11 +13,10 @@ const CourseSectionAttendance = (props) => {
     const percentage = Math.round(((present / total) * 100));
     const is_short = percentage < 85;
 
-    const attendanceDivStyle = props.length === 1 ? { width: '60%' } : {};
     const colSpan = props.length === 1 ? 8 : 6;
 
     return (
-        <div className={`col-md-${colSpan}`}>
+        <div className={`col-md-${colSpan} col-sm-12`}>
             <div className='attendance-table-div'>
                 <h3>{attendanceData.attendanceType}</h3>
                 <VerticalLine width='100%' />
@@ -68,7 +67,6 @@ const CourseAttendance = (props) => {
     return (
         <Fragment>
             <h3>Attendance</h3>
-
 
             <div className='attendance-container row'>
                 {

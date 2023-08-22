@@ -4,12 +4,21 @@
   flex-direction: row;
 }
 
-/* styling table div so it have some shadow and other styling */
 .attendance-container .attendance-table-div{
-  box-shadow: 0px 0px 5px 2px #fff;
-  /* box shadow but not on the top */
   border-radius: 10px;
 }
+
+.attendance-container .attendance-table-div{
+  box-shadow: 0px 0px 3px 1px #f8dfdf;
+}
+
+/* less shadow for mobile screens */
+@media only screen and (max-width: 600px) {
+  .attendance-container .attendance-table-div{
+    box-shadow: 0px 0px 2px 0.5px #ece0e0;
+  }
+}
+  
 .attendance-table-div > h3 {
   text-align: center;
   margin-top: 10px;
