@@ -1178,8 +1178,9 @@ button:disabled,
 #header .top-bar{
   align-items: center;
   justify-content: center;
+  margin: 0.5em 0 1em 0;
 }
-#header .top-bar .slogan{
+#header .slogan{
   margin: 0.5em 0 0 0em;
 }
 
