@@ -1,22 +1,7 @@
-function submitTask(sessionId){
-    fetch(apiUrl + '/task' , {
-        method: 'POST',
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        json: JSON.stringify({
-            sessionId: sessionId
-        })
-    })
-    .then(response => response.json())
-    .then(response => {
-        console.log(response);
-    })
+const toTitleCase = (str) => {
+    return str.toLowerCase().split(' ').map(function(word) {
+      return word.replace(word[0], word[0].toUpperCase());
+    }).join(' ');
 }
 
-const API = {
-    submitTask: submitTask
-}
-
-
+export { toTitleCase };
