@@ -1386,3 +1386,27 @@ form .button{
     opacity: 1;
   }
 }
+
+:root{
+  --dark-bg: rgb(11, 19, 30);
+  --div-light-bg: rgb(32, 43, 59);
+  --white-text-color: rgb(240, 241, 241);
+  --gray-text-color: rgb(147, 153, 162);
+}
+
+.gray-text {
+  color: var(--gray-text-color);
+}
+.white-text {
+  color: var(--white-text-color);
+}
+.gray-bg {
+  background-color: var(--div-light-bg);
+}
+.dark-bg {
+  background-color: var(--dark-bg);
+}
+
+body {
+  background-color: var(--dark-bg);
+}
