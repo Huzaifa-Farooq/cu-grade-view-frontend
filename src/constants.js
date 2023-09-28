@@ -1,5 +1,5 @@
-const apiEndpoint = "http://127.0.0.1:5000";
-// const apiEndpoint = "https://cucourseview-huzaifafarooq412.b4a.run/";
+// const apiEndpoint = "http://127.0.0.1:5000";
+const apiEndpoint = "https://cucourseview-huzaifafarooq412.b4a.run/";
 
 const getTaskDataWaitTime = 2000;
 
