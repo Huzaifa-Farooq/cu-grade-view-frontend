@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, useRef, Fragment } from "react";
 import Cookies from 'js-cookie';
 
 import './App.css';
@@ -13,6 +13,7 @@ import SessionIdInput from "./components/SessionIdInput";
 import OpeningAnimation from "./components/OpeningAnimation";
 import NavigationComponent from "./components/NavigationComponent";
 import ScoreRadarChart from './components/ScoreRadarChart';
+import Preloader from './components/Preloader';
 
 
 import { apiEndpoint, apiRequestHeaders, cookieExpireTimeHours, getTaskDataWaitTime } from './constants'
@@ -138,13 +139,11 @@ const App = () => {
   }
 
   var html = ""
-  if (!response){
-    if (!sessionId){
+  if (!response && !sessionId){
       html = <Fragment>
         <h3>Please Enter Session ID</h3>
         <SessionIdInput onSessionIdSubmit={handleSessionIdInput} />
       </Fragment>;
-    }
   }
   else if (response && response.error){
     html = (
@@ -177,13 +176,6 @@ const App = () => {
 
     html = (
     <Fragment>    
-      {/* <ScoreRadarChart 
-        fullMark={100}
-        chartTitle={currentCourseData.course_name}
-        chartData={chartData}
-        width={600}
-        height={400}
-      /> */}
       <div id='course-container'>
         <CoursesNavigation currentCourseId={visibleCourseId} handleCourseVisibility={handleCourseVisibility} courseIds={courseIds} />
         <CourseView
