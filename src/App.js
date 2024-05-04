@@ -145,9 +145,6 @@ const App = () => {
         <SessionIdInput onSessionIdSubmit={handleSessionIdInput} />
       </Fragment>;
   }
-  else if (!response && sessionId){
-    html = <Preloader />;
-  }
   else if (response && response.error){
     html = (
       <Fragment>
