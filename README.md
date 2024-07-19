@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Student Performance Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live](https://cu-grade-view.netlify.app/)
 
-## Available Scripts
+## Overview
+The **Student Performance Dashboard** is a front-end application designed to provide students with overview of student performance. This application utilizes `SessionID` obtained by logging in to Students' portal. The dashboard displays assignments, quizzes, midterm exams, final marks, and attendance using interactive charts for better visualization and analysis.
 
-In the project directory, you can run:
+## Features
+- **Assignments**: View and track assignment scores.
+- **Quizzes**: Monitor quiz performance.
+- **Midterm Exams**: Check midterm exam marks.
+- **Final Marks**: Access final exam scores.
+- **Attendance**: Overview of attendance records.
+- **Interactive Charts**: Visual representation of performance data for better insights.
 
-### `npm start`
+## Tech Stack
+- **ReactJS**: For building the user interface.
+- **Chart.js and recharts**: For creating interactive charts.
+- **Axios**: For making HTTP requests to the backend.
+- **Bootstrap**: For responsive design and styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+1. **Login**: Enter your `SessionID` to log in and access your personalized dashboard.
+2. **View Data**: Navigate through different sections (Assignments, Quizzes, Midterms, Finals, Attendance) to view your performance data.
+3. **Charts**: Interact with the charts to get detailed insights into your academic performance.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
